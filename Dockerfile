@@ -1,6 +1,6 @@
-ARG ALPINE_VERSION=3.16
+#ARG ALPINE_VERSION=3.16
 
-FROM docker.io/tiredofit/alpine:${ALPINE_VERSION}
+FROM docker.io/denisolek/alpine
 LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 
 ### Set Nginx Version Number
@@ -10,8 +10,8 @@ ENV NGINX_VERSION=1.23.2 \
     NGINX_USER=nginx \
     NGINX_GROUP=www-data \
     NGINX_WEBROOT=/www/html \
-    IMAGE_NAME="tiredofit/nginx" \
-    IMAGE_REPO_URL="https://github.com/tiredofit/docker-nginx/"
+    IMAGE_NAME="denisolek/nginx" \
+    IMAGE_REPO_URL="https://github.com/denisolek/docker-nginx/"
 
 RUN source assets/functions/00-container && \
     set -x && \
